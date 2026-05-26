@@ -11,7 +11,6 @@ import FAQ from "./pages/FAQ";
 import Thanks from "./pages/Thanks";
 import LowPriceRisk from "./pages/LowPriceRisk";
 import Voice from "./pages/Voice";
-
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
