@@ -24,22 +24,25 @@ export default function NotFound() {
           <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
 
           <h2 className="text-xl font-semibold text-slate-700 mb-4">
-            Page Not Found
+            Sidan hittades inte
           </h2>
 
           <p className="text-slate-600 mb-8 leading-relaxed">
-            Sorry, the page you are looking for doesn't exist.
+            Tyvärr, sidan du letar efter finns inte.
             <br />
-            It may have been moved or deleted.
+            Den kan ha flyttats eller tagits bort.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div
+            id="not-found-button-group"
+            className="flex flex-col sm:flex-row gap-3 justify-center"
+          >
             <Button
               onClick={handleGoHome}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
             >
               <Home className="w-4 h-4 mr-2" />
-              Go Home
+              Gå hem
             </Button>
           </div>
         </CardContent>

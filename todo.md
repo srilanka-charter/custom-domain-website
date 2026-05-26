@@ -1,0 +1,66 @@
+# SLTCS Projekt Att Göra
+
+- [x] Grundläggande layout för hemsidan (mörkt lyxresmål-tema)
+- [x] Navigationsfält (PLANER, MODELLRESPLAN, FORDON, FAQ, KONTAKT)
+- [x] Hero-bildspel (5 bilder, manus-storage bilder)
+- [x] Statistikräknare (1200+, 4.9, 50+)
+- [x] Kontaktformulär (landsväljare, Annan textinmatning, valuta väljare, anpassad DatePicker)
+- [x] Anpassad engelsk DatePicker (OS-oberoende, Sön/Mån/Tis/Ons/Tor/Fre/Lör)
+- [x] Varför SLTCS-sektion (6 anledningar)
+- [x] Frågor-sektion
+- [x] Planer-sektion (Brons / Silver / Guld)
+- [x] Modellresplaner (5 planer: 4N5D, 5N6D, 6N7D, 5-7 dagar kulturell, 10 dagar-2 veckor)
+- [x] Destinationer-sektion (6 destinationer med bilder)
+- [x] Recensioner-sektion (3 kundrecensioner)
+- [x] Hur det fungerar-sektion (5 steg)
+- [x] Fordon-sektion (Sedan / Van / Stor Van)
+- [x] FAQ-sektion (6 frågor)
+- [x] Företagsinformationstabell
+- [x] Sidfot med navigeringslänkar
+- [x] Flytande CTA-knapp
+- [x] Ta bort FÖRFRÅGAN-knappen från navigeringsfältet
+- [x] Ta bort ▾ från MODELLRESPLAN
+- [x] Fixa hero-bildspelsgap (margin-top: -72px)
+- [x] Full-stack uppgradering (tRPC + Express + DB)
+- [x] server/routers.ts: enquiry.submit endpoint (nodemailer + notifyOwner)
+- [x] ContactForm: tRPC mutation (trpc.enquiry.submit.useMutation)
+- [x] ContactForm: omdirigera till /thanks vid framgång
+- [x] Tack-sida (/thanks route)
+- [x] App.tsx: /thanks route tillagd
+- [x] GMAIL_USER miljövariabel inställd
+- [x] GMAIL_APP_PASSWORD miljövariabel inställd
+- [x] Vitest-tester godkända (enquiry.test.ts + auth.logout.test.ts)
+- [x] Vår Fordonspark: ersätt ikoner med riktiga fordonsfoton (Sedan / Van / Stor Van)
+- [x] Kundröster: 5 riktiga recensioner med foton, karusellformat med 2 per bild
+- [x] storageProxy.ts TypeScript-fel åtgärdat (req: any cast)
+- [x] nodemailer installerat och fungerar
+- [x] Recensionsfotohöjd ökad till 380px med object-position: top (alla ansikten synliga)
+- [x] Ersätt Ranjana recensionsfoto med nytt forsränningsfoto
+- [x] Lägg till 6:e recension: Familjen D (Chamil, december 2025, 5 passagerare)
+- [x] Lägg till språkbytare i navigeringsfältet (efter KONTAKT, engelska etiketter)
+- [x] Fixa Git-konfliktmarkörer i index.html (ja hreflang)
+- [x] Skapa /price-sida med USD/GBP/EUR-flikar och Brons/Silver/Guld fordonsflikar
+- [x] Lägg till PRIS-länk i navigeringsfältet och registrera rutt i App.tsx
+- [x] Skapa /vehicles-sida (engelsk översättning av japansk version)
+- [x] Lägg till /vehicles-rutt till App.tsx
+- [x] Uppdatera FORDON-länk i navigeringsfältet till /vehicles
+- [ ] Publicera till sv.srilanka-charter.com
+- [x] Fixa JSX-stängningstagfel i Home.tsx (scroll wrapper div för WhySLTCS cards grid)
+- [x] Mobil: WhySLTCS-kort 2-kolumns horisontell scroll (ta bort overflow:hidden från inline-stil, lägg till scroll wrapper)
+- [x] Mobil: Hamburgermeny med rullgardinsdragspel (Modellresplan underobjekt, Språkbytare) — logotypen visar endast SLTCS på mobil
+- [x] WhySLTCS-sektion: omdesignad till vertikal kortstapel (ikoncirkel + nummer + titel + beskrivning) matchande japansk versionstil
+- [x] Kontaktformulär och 6 skäl varför sammanslagna till en enda 2-kolumns sektion (vänster: formulär, höger: kort) matchande japansk versionlayout
+- [x] Skapa /low-price-risk-sida (LowPriceRisk.tsx) med omskrivet innehåll från referensartikel
+- [x] Lägg till /low-price-risk-rutt till App.tsx
+- [x] Lägg till →detalj-länk under varningsmeddelandet för körsträcka i Pricing.tsx
+- [x] Fastprislista-sektion: ljus krämig bakgrund (#faf7f2), vita kort med mörk text, gråa ramar
+- [x] Föreslagna resplaner-sektion: ljus krämig bakgrund (#faf7f2), mörk text för alla element via CSS-åsidosättningar
+- [x] Röst-sida (/voice): 8 recensionskort med betyg för förare/fordon/operatör, foton från manus-storage
+- [x] Hemrecensioner: HomeRatingsMini-komponent tillagd (förare/fordon/operatör-fält + totalpoäng)
+- [x] Hemrecensioner: betygsdata tillagd till alla 6 recensioner (4.7-5.0 intervall)
+- [x] Röst-sida: HOME_REVIEWS (6 recensioner från hemmet) tillagda och sammanslagna med VOICE_REVIEWS
+- [x] Röst-sida: fotobredd ökad från 280px till 380px, min-höjd 280px till 320px
+- [x] App.tsx: /voice-rutt tillagd
+- [x] index.css: Röst-sida CSS-stilar tillagda (.voice-page, .voice-card, .voice-ratings, .voice-breakdown, etc.)
+- [x] Navigationsfält: RÖST-länk tillagd (dator + mobil)
+- [x] Hemrecensioner-sektion: "Fler röster"-knapp tillagd som länkar till /voice
