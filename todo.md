@@ -45,6 +45,9 @@
 - [x] Lägg till /vehicles-rutt till App.tsx
 - [x] Uppdatera FORDON-länk i navigeringsfältet till /vehicles
 - [ ] Publicera till sv.srilanka-charter.com
+- [ ] Git履歴のリカバリー（システム指示の手順実行）
+- [ ] サンクスページ（Thanksページ）の作成とルーティング確認
+- [ ] メール送信先を srilanka.41032@gmail.com に設定し動作確認
 - [x] Fixa JSX-stängningstagfel i Home.tsx (scroll wrapper div för WhySLTCS cards grid)
 - [x] Mobil: WhySLTCS-kort 2-kolumns horisontell scroll (ta bort overflow:hidden från inline-stil, lägg till scroll wrapper)
 - [x] Mobil: Hamburgermeny med rullgardinsdragspel (Modellresplan underobjekt, Språkbytare) — logotypen visar endast SLTCS på mobil
