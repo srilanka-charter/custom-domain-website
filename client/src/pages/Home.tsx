@@ -568,12 +568,12 @@ function ContactAndWhy() {
               <div style={{ 
                 marginBottom: "16px", 
                 padding: "12px 16px", 
-                background: "rgba(201, 168, 76, 0.08)", 
+                background: "rgba(201, 168, 76, 0.12)", 
                 borderRadius: "6px", 
                 borderLeft: "4px solid #c9a84c",
-                fontSize: "0.85rem",
-                color: "#e2e8f0",
-                lineHeight: "1.4"
+                fontSize: "0.88rem",
+                color: "#ffffff",
+                lineHeight: "1.5"
               }}>
                 <strong>Observera:</strong> Efter att du har skickat din förfrågan kommer vår ansvariga personal att kontakta och svara dig på <strong>engelska</strong>.
               </div>
