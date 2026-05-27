@@ -45,6 +45,9 @@
 - [x] Lägg till /vehicles-rutt till App.tsx
 - [x] Uppdatera FORDON-länk i navigeringsfältet till /vehicles
 - [ ] Publicera till sv.srilanka-charter.com
+- [x] 言語プルダウンにマレーシア語版（https://ms.srilanka-charter.com）を追加
+- [x] 言語プルダウンに英語版（https://en.srilanka-charter.com）を追加
+- [x] 全言語版のURLを正しいhrefに更新（デスクトップ・モバイル両方）
 - [x] Git履歴のリカバリー（システム指示の手順実行）
 - [x] サンクスページ（Thanksページ）の作成とルーティング確認（実装済みを確認）
 - [x] メール送信先を srilanka.41032@gmail.com に設定し動作確認

@@ -120,12 +120,14 @@ function Navbar() {
   const [mobileLangOpen, setMobileLangOpen] = useState(false);
 
   const LANGUAGES = [
+    { label: "English", url: "https://en.srilanka-charter.com/" },
+    { label: "Japanese", url: "https://sltcs.srilanka-charter.com/" },
     { label: "French", url: "https://fr.srilanka-charter.com/" },
     { label: "Spanish", url: "https://es.srilanka-charter.com/" },
     { label: "German", url: "https://de.srilanka-charter.com/" },
     { label: "Dutch", url: "https://nl.srilanka-charter.com/" },
     { label: "Russian", url: "https://ru.srilanka-charter.com/" },
-    { label: "Japanese", url: "https://sltcs.srilanka-charter.com/" },
+    { label: "Malay", url: "https://ms.srilanka-charter.com/" },
   ];
 
   useEffect(() => {
@@ -227,7 +229,7 @@ function Navbar() {
             </button>
             {mobileLangOpen && (
               <div className="mobile-accordion-body">
-                {[{label:"French",url:"https://fr.srilanka-charter.com/"},{label:"Spanish",url:"https://es.srilanka-charter.com/"},{label:"German",url:"https://de.srilanka-charter.com/"},{label:"Dutch",url:"https://nl.srilanka-charter.com/"},{label:"Russian",url:"https://ru.srilanka-charter.com/"},{label:"Japanese",url:"https://sltcs.srilanka-charter.com/"}].map((lang) => (
+                {[{label:"English",url:"https://en.srilanka-charter.com/"},{label:"Japanese",url:"https://sltcs.srilanka-charter.com/"},{label:"French",url:"https://fr.srilanka-charter.com/"},{label:"Spanish",url:"https://es.srilanka-charter.com/"},{label:"German",url:"https://de.srilanka-charter.com/"},{label:"Dutch",url:"https://nl.srilanka-charter.com/"},{label:"Russian",url:"https://ru.srilanka-charter.com/"},{label:"Malay",url:"https://ms.srilanka-charter.com/"}].map((lang) => (
                   <a key={lang.label} href={lang.url}>{lang.label}</a>
                 ))}
               </div>
