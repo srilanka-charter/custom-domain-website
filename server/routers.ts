@@ -65,7 +65,7 @@ async function sendEnquiryEmail(data: {
 
   await transporter.sendMail({
     from: `"SLTCS Förfrågningssystem" <${process.env.GMAIL_USER ?? "srilanka.41032@gmail.com"}>`,
-    to: "srilanka.41032@gmail.com",
+    to: ["srilanka.41032@gmail.com", "contact@gohellolanka.com"],
     subject: `[SLTCS] Ny förfrågan från ${data.name} (${countryDisplay})`,
     html,
   });
@@ -112,7 +112,7 @@ export const appRouter = router({
         // 1. Send email via Gmail SMTP
         try {
           await sendEnquiryEmail(input);
-          console.log("[Enquiry] E-post skickades till srilanka.41032@gmail.com");
+          console.log("[Enquiry] E-post skickades till srilanka.41032@gmail.com och contact@gohellolanka.com");
         } catch (err) {
           console.error("[Enquiry] Det gick inte att skicka e-post:", err);
           // Blockera inte svaret — meddela ändå ägaren via Manus
