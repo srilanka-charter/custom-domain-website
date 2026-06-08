@@ -1,6 +1,5 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
-import { notifyOwner } from "./_core/notification";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
@@ -64,9 +63,10 @@ async function sendEnquiryEmail(data: {
   `;
 
   await transporter.sendMail({
-    from: `"SLTCS Förfrågningssystem" <${process.env.GMAIL_USER ?? "srilanka.41032@gmail.com"}>`,
-    to: ["srilanka.41032@gmail.com", "contact@gohellolanka.com"],
-    subject: `[SLTCS] Ny förfrågan från ${data.name} (${countryDisplay})`,
+    from: `"SLTCS Inquiry (SV)" <${process.env.GMAIL_USER ?? "srilanka.41032@gmail.com"}>`,
+    to: "srilanka.41032@gmail.com, contact@gohellolanka.com",
+    replyTo: data.email,
+    subject: `[SLTCS SV] Ny förfrågan — ${data.name} (${countryDisplay}) | ${data.startDate} → ${data.endDate}`,
     html,
   });
 }
@@ -117,26 +117,6 @@ export const appRouter = router({
           console.error("[Enquiry] Det gick inte att skicka e-post:", err);
           // Blockera inte svaret — meddela ändå ägaren via Manus
         }
-
-        // 2. Notify owner via Manus notification system (fallback)
-        const notifContent = [
-          `Namn: ${input.name}`,
-          `Land: ${countryDisplay}`,
-          `E-post: ${input.email}`,
-          `Telefon: ${input.phone || "—"}`,
-          `Startdatum: ${input.startDate}`,
-          `Slutdatum: ${input.endDate}`,
-          `Upphämtning: ${input.pickup}`,
-          `Vuxna: ${input.adults} / Barn: ${input.children}`,
-          `Fordon: ${input.vehicle}`,
-          `Valuta: ${input.currency || "—"}`,
-          `Anteckningar: ${input.notes || "—"}`,
-        ].join("\n");
-
-        await notifyOwner({
-          title: `Ny förfrågan från ${input.name} (${countryDisplay})`,
-          content: notifContent,
-        }).catch(e => console.warn("[Enquiry] Manus-notifiering misslyckades:", e));
 
         return { success: true };
       }),
